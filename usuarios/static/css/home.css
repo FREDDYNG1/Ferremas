@@ -1,0 +1,57 @@
+/* home.css */
+
+/* Barra superior */
+.top-bar {
+    background-color: #d84315;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Marca del navbar */
+.navbar-brand span {
+    font-weight: bold;
+    color: #dc3545;
+    font-size: 1.6rem;
+}
+
+/* Categorías */
+.bg-dark span {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.bg-dark span:hover {
+    color: #ffc107;
+}
+
+/* Banner principal */
+.banner {
+    background: linear-gradient(90deg, #ff4081, #ff6e40);
+    color: white;
+    padding: 60px 20px;
+    background-image: url('https://via.placeholder.com/1400x400');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.btn-cta {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+}
+
+.btn-cta:hover {
+    background-color: #bb2d3b;
+}
+
+/* Productos destacados */
+.card-title {
+    font-weight: bold;
+}

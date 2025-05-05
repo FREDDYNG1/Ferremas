@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo de Herramientas</title>
+</head>
+<body>
+    <h1>Catálogo</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                <strong>{{ producto.nombre }}</strong><br>
+                {{ producto.descripcion }}<br>
+                Precio: ${{ producto.precio }}<br>
+                Stock: {{ producto.stock }}<br>
+                {% if producto.imagen %}
+                    <img src="{{ producto.imagen.url }}" width="200">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

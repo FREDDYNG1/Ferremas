@@ -1,0 +1,22 @@
+.banner {
+    background: linear-gradient(90deg, #e53935, #ff7043);
+    color: white;
+    padding: 60px 20px;
+    background-image: url('https://via.placeholder.com/1400x400');
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-cta {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.btn-cta:hover {
+    background-color: #b52b31;
+    color: #fff;
+}

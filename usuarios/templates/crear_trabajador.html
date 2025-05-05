@@ -1,0 +1,9 @@
+<h2>Crear Trabajador</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Crear</button>
+</form>
+
+<a href="{% url 'vista_admin' %}">Volver al panel</a>

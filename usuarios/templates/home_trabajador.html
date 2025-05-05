@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Trabajador - Ferremas</title>
+</head>
+<body>
+    <h2>🔧 Bienvenido Trabajador {{ user.first_name }}</h2>
+    <p>Aquí puedes administrar productos, pedidos y otras funciones asignadas.</p>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'vista_productos_cliente' %}">🛠 Ver Catálogo</a></li>
+            <!-- Aquí podrías agregar enlaces como -->
+            <li><a href="{% url 'agregar_producto' %}">➕ Agregar Producto</a></li>
+
+            <!-- <li><a href="{% url 'ver_pedidos' %}">📦 Ver Pedidos</a></li> -->
+        </ul>
+    </nav>
+
+    <form action="{% url 'logout' %}" method="post" style="margin-top: 20px;">
+        {% csrf_token %}
+        <button type="submit">🚪 Cerrar sesión</button>
+    </form>
+</body>
+</html>

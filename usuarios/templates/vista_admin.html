@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración</title>
+</head>
+<body>
+    <h1>Bienvenido al panel de administración de Ferremas</h1>
+
+    <p><a href="{% url 'crear_trabajador' %}">Crear nuevo trabajador</a></p>
+    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
+    
+
+    <h2>Lista de Trabajadores</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Fecha Nacimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for trabajador in trabajadores %}
+                <tr>
+                    <td>{{ trabajador.user.first_name }} {{ trabajador.user.last_name }}</td>
+                    <td>{{ trabajador.user.email }}</td>
+                    <td>{{ trabajador.telefono }}</td>
+                    <td>{{ trabajador.fecha_nacimiento }}</td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="4">No hay trabajadores registrados.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
